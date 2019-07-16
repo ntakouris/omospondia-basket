@@ -1,0 +1,20 @@
+.navbar {
+    height: 24px;
+    margin: 16px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.navbar > a {
+    text-decoration: none;
+    color: lightsteelblue;
+    cursor: default;
+    margin: 8px;
+    font-size: 20px;
+}
+
+.navbar > a:hover {
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /html
+Disallow: /html/*
+Allow: /dist
+Allow: /dist/*
