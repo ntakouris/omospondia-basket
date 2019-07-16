@@ -4,18 +4,19 @@ const imagemin = require('gulp-imagemin');
 const minify = require('gulp-minify');
 
 function html() {
-  return src('html/*.html')
+  return src('html/**')
+    .pipe(minify())
     .pipe(dest('docs/html'))
 }
 
 function css() {
-  return src('css/*.css')
+  return src('css/**')
     .pipe(minifyCSS())
     .pipe(dest('docs/css'))
 }
 
 function js() {
-  return src('js/*.js', { sourcemaps: true })
+  return src('js/**', { sourcemaps: true })
     .pipe(minify())
     .pipe(dest('docs/js', { sourcemaps: true }))
 }

@@ -85,6 +85,20 @@ h2 {
     }
 }
 
+@media screen and (max-width: 420px) {
+    .flex-container {
+        margin: 8px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .flex-container {
+        margin: 4px;
+        margin-bottom: 0;
+    }
+}
+
 /* Item Grid */
 .item-grid {
     display: flex;
