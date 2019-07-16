@@ -5,25 +5,25 @@ const minify = require('gulp-minify');
 
 function html() {
   return src('html/*.html')
-    .pipe(dest('build/html'))
+    .pipe(dest('docs/html'))
 }
 
 function css() {
   return src('css/*.css')
     .pipe(minifyCSS())
-    .pipe(dest('build/css'))
+    .pipe(dest('docs/css'))
 }
 
 function js() {
   return src('js/*.js', { sourcemaps: true })
     .pipe(minify())
-    .pipe(dest('build/js', { sourcemaps: true }))
+    .pipe(dest('docs/js', { sourcemaps: true }))
 }
 
 function assets() {
     return src('assets/*')
       .pipe(imagemin())
-      .pipe(dest('build/assets'))
+      .pipe(dest('docs/assets'))
 }
 
 exports.js = js;
