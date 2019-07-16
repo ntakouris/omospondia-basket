@@ -21,7 +21,7 @@ function js() {
 }
 
 function assets() {
-    return src('assets/*')
+    return src('assets/**')
       .pipe(imagemin())
       .pipe(dest('docs/assets'))
 }
