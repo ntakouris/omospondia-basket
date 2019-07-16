@@ -108,7 +108,6 @@ h2 {
 }
 
 .item:hover {
-    background-color: lightgray;
     cursor: pointer;
 }
 
@@ -162,8 +161,12 @@ h2 {
     max-height: 1000px;
 }
 
-.expand-content > p{
+.expand-content > p {
     margin: 6px;
+}
+
+.expand-content > ul {
+    list-style: square;
 }
 
 /* Pretty Button */
