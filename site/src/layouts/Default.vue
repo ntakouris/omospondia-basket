@@ -6,9 +6,11 @@
       </md-app-toolbar>
 
       <md-app-drawer md-permanent="full">
-        <md-toolbar class="md-transparent" md-elevation="0">
-          Μενού
-        </md-toolbar>
+        <CompositeLink :link="{ glink: '/' }">
+          <md-toolbar class="md-transparent" md-elevation="0">
+            Αρχική Σελίδα
+          </md-toolbar>
+        </CompositeLink>
 
         <md-list>
           <CompositeLink v-for="link in navlinks" :key="link.text" :link="link">
@@ -52,7 +54,7 @@ export default {
   }
 
   .md-drawer {
-    width: 230px;
+    width: 250px;
     max-width: calc(100vw - 125px);
   }
 
