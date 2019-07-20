@@ -6,5 +6,7 @@
 
 module.exports = {
   siteName: 'Omospondia Basket',
-  plugins: []
+  plugins: [],
+  siteUrl: 'https://zarkopafilis.github.io',
+  pathPrefix: '/omospondia-basket',
 }
