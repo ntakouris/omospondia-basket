@@ -1,4 +1,5 @@
 gridsome build
+rm ../docs
 mv dist ../docs
 cd ..
 git add .
