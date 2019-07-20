@@ -1,19 +1,24 @@
 <template>
   <div class="page-container md-layout-row">
     <md-app>
-      <md-app-toolbar class="md-primary">
+      <md-app-toolbar class="md-primary" md-elevation="0">
+        <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
+          <md-icon>menu</md-icon>
+        </md-button>
+        <md-button class="md-icon-button md-dense" @click="toggleMenu" v-else>
+          <md-icon>keyboard_arrow_left</md-icon>
+        </md-button>
         <span class="md-title">{{ title }}</span>
       </md-app-toolbar>
 
-      <md-app-drawer md-permanent="full">
-        <CompositeLink :link="{ glink: '/' }">
+      <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
           <md-toolbar class="md-transparent" md-elevation="0">
-            Αρχική Σελίδα
+            <CompositeLink :link="{ glink: '/' }"><span style="color: black;">Αρχική Σελίδα</span></CompositeLink>
           </md-toolbar>
-        </CompositeLink>
-
         <md-list>
           <CompositeLink v-for="link in navlinks" :key="link.text" :link="link">
+            <md-divider class="md-inset"/>
+
             <md-list-item>
               <md-icon>{{ link.icon }}</md-icon>
               <span class="md-list-item-text">{{ link.text }}</span>
@@ -39,9 +44,19 @@ export default {
     CompositeLink
   },
   props: ['title'],
-  data () {
-    return {
-      navlinks
+  data: () => ({
+    windowHeight: 0,
+    navlinks,
+    menuVisible: true
+  }),
+  methods: {
+    toggleMenu () {
+      this.menuVisible = !this.menuVisible
+    }
+  },
+  mounted () {
+    if (window.innerWidth < 730) {
+      this.menuVisible = false
     }
   }
 }
@@ -49,16 +64,12 @@ export default {
 
 <style scoped>
   .md-app {
-    min-height: 350px;
+    min-height: 100vh;
     border: 1px solid rgba(#000, .12);
   }
 
   .md-drawer {
     width: 250px;
     max-width: calc(100vw - 125px);
-  }
-
-  g-link {
-    all: unset;
   }
 </style>
