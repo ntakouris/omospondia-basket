@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "announcement",
+        "text": "12 Προτάσεις",
+        "glink": "/"
+    },
+    {
+        "icon": "group_work",
+        "text": "Εκλογικές Διαδικασίες",
+        "glink": "/eklogikes-diadikasies"
+    },
+    {
+        "icon": "pan_tool",
+        "text": "Καταγγελίες",
+        "glink": "/katagelies"
+    },
+    {
+        "icon": "view_agenda",
+        "text": "Άρθρα",
+        "href": "https://ntakouris.wordpress.com/author/ntakourisbas/"
+    },
+    {
+        "icon": "info",
+        "text": "About",
+        "glink": "/about"
+    }
+]
