@@ -5,15 +5,15 @@
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <md-button class="md-icon-button md-dense" @click="toggleMenu" v-else>
-          <md-icon>keyboard_arrow_left</md-icon>
-        </md-button>
         <span class="md-title">{{ title }}</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
           <md-toolbar class="md-transparent" md-elevation="0">
-            <CompositeLink :link="{ glink: '/' }"><span style="color: black;">Αρχική Σελίδα</span></CompositeLink>
+            <CompositeLink :link="{ glink: '/' }" class="md-toolbar-section-start"><span style="color: black;">Αρχική Σελίδα</span></CompositeLink>
+            <md-button class="md-icon-button md-dense md-toolbar-section-end" @click="toggleMenu" v-if="menuVisible">
+              <md-icon>keyboard_arrow_left</md-icon>
+            </md-button>
           </md-toolbar>
         <md-list>
           <CompositeLink v-for="link in navlinks" :key="link.text" :link="link">
