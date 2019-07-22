@@ -5,7 +5,7 @@
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <span class="md-title">{{ title }}</span>
+        <span class="md-title"><img src="basketball.png" class="ball"/>{{ title }}</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
@@ -71,5 +71,11 @@ export default {
   .md-drawer {
     width: 250px;
     max-width: calc(100vw - 125px);
+  }
+
+  .ball {
+    margin-right: 20px;
+    width: 32px;
+    height: 32px;
   }
 </style>
