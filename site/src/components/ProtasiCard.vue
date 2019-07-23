@@ -5,15 +5,15 @@
         </md-card-header>
 
         <md-card-content :class="collapsed ? 'collapsed' : 'uncollapsed'">
-        <slot />
+        <slot class="main-content"/>
 
-        <md-button class="md-raised md-accent">Καταθεση προτασεων προβληματων και καταγγελιων</md-button>
+        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent"> εδω</md-button></p>
         </md-card-content>
         
         <md-card-actions>
           <md-button @click="toggleCollapsed"> {{ collapsed ? 'Περισσοτερα' : 'Λιγοτερα'}}</md-button>
           <md-button class="md-icon-button" @click="toggleCollapsed">
-            <md-icon>{{collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</md-icon>
+            <md-icon>{{ collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</md-icon>
           </md-button>
         </md-card-actions>
   </md-card>
@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+.main-content {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 ul {
   margin: 0;
 }

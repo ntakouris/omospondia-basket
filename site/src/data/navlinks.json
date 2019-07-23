@@ -1,7 +1,7 @@
 [
     {
         "icon": "announcement",
-        "text": "12 Προτάσεις",
+        "text": "12 Προτάσεις συμμετοχής και ανάπτυξης",
         "glink": "/protaseis"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
         "icon": "pan_tool",
-        "text": "Καταγγελίες",
+        "text": "Δημόσιες Καταγγελίες",
         "glink": "/katagelies"
     },
     {

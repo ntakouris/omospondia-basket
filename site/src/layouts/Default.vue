@@ -1,14 +1,13 @@
 <template>
   <div class="page-container md-layout-row">
     <md-app>
-      <md-app-toolbar class="md-primary md-large" md-elevation="0">
+      <md-app-toolbar class="md-primary md-toolbar-row md-toolbar-offset" md-elevation="0">
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <div>
-          <img src="basketball.png" class="ball"/>
-          <span class="md-title">{{ title }}</span>
-        </div>
+        <img src="basketball.png" class="ball"/>
+
+        <span class="md-title" style="">{{ title }}</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
@@ -30,7 +29,7 @@
         </md-list>
       </md-app-drawer>
 
-      <md-app-content>
+      <md-app-content class="md-scrollbar">
         <slot />
       </md-app-content>
     </md-app>
@@ -70,26 +69,24 @@ export default {
 
 @include md-register-theme("default", (
   primary: md-get-palette-color(blue, A200),
-  accent: md-get-palette-color(deeporange, A200)
+  accent: md-get-palette-color(orange, A200)
 ));
 
 @import "~vue-material/dist/theme/all";
 
-.md-button-content {
-  color: white;
+.md-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.md-title {
-  word-wrap: break-word;
-  max-width: 100%;
-}
 .md-app {
   min-height: 100vh;
   border: 1px solid rgba(#000, .12);
 }
 
 .md-drawer {
-  width: 250px;
+  width: 200px;
   max-width: calc(100vw - 125px);
 }
 
