@@ -5,7 +5,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
 
 export default function (Vue, { router, head, isClient }) {
   head.link.push({

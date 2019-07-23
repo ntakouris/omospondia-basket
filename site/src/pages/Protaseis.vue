@@ -1,5 +1,5 @@
 <template>
-  <Layout :title="'12 Προτάσεις για μια Ομοσπονδία με διαφάνεια'">
+  <Layout :title="'12 Προτάσεις για μια Ομοσπονδία συμμετοχής και ανάπτυξης'">
     <div class="grid">
       <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :title="protasi.title">
           <ul>

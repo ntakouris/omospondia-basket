@@ -6,9 +6,11 @@
 
         <md-card-content :class="collapsed ? 'collapsed' : 'uncollapsed'">
         <slot />
-        </md-card-content>
 
-        <md-card-actions :if="!collapsed">
+        <md-button class="md-raised md-accent">Καταθεση προτασεων προβληματων και καταγγελιων</md-button>
+        </md-card-content>
+        
+        <md-card-actions>
           <md-button @click="toggleCollapsed"> {{ collapsed ? 'Περισσοτερα' : 'Λιγοτερα'}}</md-button>
           <md-button class="md-icon-button" @click="toggleCollapsed">
             <md-icon>{{collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</md-icon>
@@ -57,7 +59,8 @@ ul {
 }
 
 .smallflex {
-  flex: 1 0 41%;
+  /* flex: 1 0 41%; */
+  flex: 2 0 100%;
 }
 
 .bigflex {
