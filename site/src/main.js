@@ -6,6 +6,8 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 
+import SocialSharing from 'vue-social-sharing'
+
 export default function (Vue, { router, head, isClient }) {
   head.link.push({
     rel: 'stylesheet',
@@ -13,6 +15,7 @@ export default function (Vue, { router, head, isClient }) {
   })
 
   Vue.use(VueMaterial)
+  Vue.use(SocialSharing);
     // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }

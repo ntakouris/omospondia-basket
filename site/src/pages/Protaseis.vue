@@ -1,9 +1,6 @@
 <template>
   <Layout :title="'12 Προτάσεις για μια Ομοσπονδία συμμετοχής και ανάπτυξης'">
-    <div class="grid">
-      <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :protasi="protasi" />
-    </div>
-
+    <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :protasi="protasi" />
   </Layout>
 </template>
 

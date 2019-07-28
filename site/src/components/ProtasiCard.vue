@@ -18,16 +18,41 @@
             <md-icon>{{ collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</md-icon>
           </md-button>
 
-          <md-button @click="share()"> Μοιρασου</md-button>
-          <md-button class="md-icon-button" @click="share()">
+          <md-button @click="openSharingDialog()"> Μοιρασου</md-button>
+          <md-button class="md-icon-button" @click="openSharingDialog()">
             <md-icon>share</md-icon>
           </md-button>
         </md-card-actions>
 
-        <md-snackbar :md-duration="10000" :md-active.sync="showSnackbar" md-persistent>
-          <span>Επιτυχής αντιγραφή συνδέσμου διαμοίρασης. Κάντε επικόλληση για να στείλετε τον σύνδεσμο.</span>
-          <md-button class="md-primary" @click="showSnackbar = false">Ok</md-button>
-      </md-snackbar>
+      <!-- Dialog -->
+    <md-dialog :md-active.sync="showDialog">
+    <social-sharing :url="getSharingLink()"
+                          :title="protasi.title"
+                          :description="protasi.items[0]"
+                          hashtags="basket,basketgr,omospondia"
+                          twitter-user="v_ntakouris"
+                          inline-template
+                          style="display: flex; justify-content: space-between;">
+      <div>
+      <network network="facebook">
+        <img class="social" src="/facebook.png" />
+      </network>
+
+      <network network="linkedin">
+        <img class="social" src="/linkedin.png" />
+      </network>
+
+      <network network="twitter">
+        <img class="social" src="/twitter.png" />
+      </network>
+      </div>
+    </social-sharing>
+
+      <md-dialog-actions>
+        <md-button class="md-accent" @click="copyToClipboard(getSharingLink())">Αντιγραφη συνδεσμου</md-button>
+        <md-button @click="showDialog = false">OK</md-button>
+      </md-dialog-actions>
+    </md-dialog>
   </md-card>
 </template>
 
@@ -38,7 +63,7 @@ export default {
   data () {
     return {
       collapsed: true,
-      showSnackbar: false,
+      showDialog: false,
     }
   },
   mounted () {
@@ -48,14 +73,25 @@ export default {
     }
   },
   methods: {
-    toggleCollapsed: function () {
-      this.collapsed = !this.collapsed
-    },
-    share: function () {
+    getSharingLink: function () {
       document.location.hash = this.protasi.id
       const link = document.location.href
-      this.copyToClipboard(link)
-      this.showSnackbar = true
+      document.location.hash = ''
+      return link
+    },
+    toggleCollapsed: function () {
+      this.collapsed = !this.collapsed
+
+      if (!this.collapsed) {
+        this.showLocationHash()
+      }
+    },
+    openSharingDialog: function () {
+      this.showDialog = true
+      this.showLocationHash()
+    },
+    showLocationHash: function () {
+      document.location.hash = this.protasi.id
     },
     copyToClipboard: function (text) {
       // Create an element with position -9999 px, focus it's content, copy the content, remove it
@@ -75,7 +111,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.social {
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+}
+.social:hover {
+  cursor: pointer;
+}
 .main-content {
   text-overflow: ellipsis;
   white-space: nowrap;
