@@ -14,6 +14,11 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons'
   })
 
+  head.meta.push({
+    name: 'keywords',
+    content: 'basket, basketgr, omospondia, protaseis, ntakouris, kataggelies'
+  })
+
   Vue.use(VueMaterial)
   Vue.use(SocialSharing);
     // Set default layout as a global component
