@@ -78,6 +78,16 @@ html {
 
 @import "~vue-material/dist/theme/all";
 
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: purple;
+}
+
 .md-title {
   overflow: hidden;
   text-overflow: ellipsis;

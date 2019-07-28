@@ -29,7 +29,7 @@
     <social-sharing :url="getSharingLink()"
                           :title="protasi.title"
                           :description="protasi.items[0]"
-                          hashtags="basket,basketgr,omospondia"
+                          hashtags="basketgr"
                           twitter-user="v_ntakouris"
                           inline-template
                           style="display: flex; justify-content: space-between;">
@@ -49,9 +49,15 @@
     </social-sharing>
 
       <md-dialog-actions>
-        <md-button class="md-accent" @click="copyToClipboard(getSharingLink())">Αντιγραφη συνδεσμου</md-button>
+        <md-button class="md-accent" @click="copySharingLink()">Αντιγραφη συνδεσμου</md-button>
         <md-button @click="showDialog = false">OK</md-button>
       </md-dialog-actions>
+
+      <!-- Copy verification snackbar -->
+      <md-snackbar :md-duration="10000" :md-active.sync="showSnackbar" md-persistent>
+        <span>Μπορείτε να κάνετε επικόλληση τον σύνδεσμο για να τον χρησιμοποιήσετε.</span>
+        <md-button class="md-primary" @click="showSnackbar = false">Ok</md-button>
+      </md-snackbar>
     </md-dialog>
   </md-card>
 </template>
@@ -66,6 +72,7 @@ export default {
     return {
       collapsed: true,
       showDialog: false,
+      showSnackbar: false
     }
   },
   mounted () {
@@ -79,6 +86,10 @@ export default {
       const base = config.baseUrl
       const link = `${base}/protaseis#${this.protasi.id}`
       return link
+    },
+    copySharingLink: function () {
+      this.copyToClipboard(this.getSharingLink())
+      this.showSnackbar = true
     },
     toggleCollapsed: function () {
       this.collapsed = !this.collapsed
