@@ -35,15 +35,15 @@
                           style="display: flex; justify-content: space-between;">
       <div>
       <network network="facebook">
-        <img class="social" src="/facebook.png" />
+        <img class="social" src="/../facebook.png" />
       </network>
 
       <network network="linkedin">
-        <img class="social" src="/linkedin.png" />
+        <img class="social" src="/../linkedin.png" />
       </network>
 
       <network network="twitter">
-        <img class="social" src="/twitter.png" />
+        <img class="social" src="/../twitter.png" />
       </network>
       </div>
     </social-sharing>
@@ -55,14 +55,6 @@
     </md-dialog>
   </md-card>
 </template>
-
-<static-query>
-query {
-  metaData {
-    siteUrl
-  }
-}
-</static-query>
 
 <script>
 import config from '~/data/config.json'
