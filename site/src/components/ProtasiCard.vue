@@ -56,7 +56,17 @@
   </md-card>
 </template>
 
+<static-query>
+query {
+  metaData {
+    siteUrl
+  }
+}
+</static-query>
+
 <script>
+import config from '~/data/config.json'
+
 export default {
   name: 'ProtasiCard',
   props: ['protasi'],
@@ -74,9 +84,8 @@ export default {
   },
   methods: {
     getSharingLink: function () {
-      document.location.hash = this.protasi.id
-      const link = document.location.href
-      document.location.hash = ''
+      const base = config.baseUrl
+      const link = `${base}/protaseis#${this.protasi.id}`
       return link
     },
     toggleCollapsed: function () {

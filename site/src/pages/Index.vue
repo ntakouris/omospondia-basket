@@ -57,10 +57,11 @@ export default {
         { name: 'twitter:title', content: this.title },
         //{ name: 'twitter:description', content: this.description(this.$page.post) },
         { name: 'twitter:site', content: '@v_ntakouris' },
-        { name: 'twitter:creator', content: '@v_ntakouris' },
+        { name: 'twitter:creator', content: '@v_ntakouris' }
         //{ name: 'twitter:image', content: this.ogImageUrl },
-      ],
+      ]
     }
+  }
 }
 </script>
 
