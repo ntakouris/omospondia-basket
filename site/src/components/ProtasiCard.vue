@@ -35,15 +35,15 @@
                           style="display: flex; justify-content: space-between;">
       <div>
       <network network="facebook">
-        <img class="social" src="/../facebook.png" />
+        <img class="social" src="/omospondia-basket/facebook.png"/>
       </network>
 
       <network network="linkedin">
-        <img class="social" src="/../linkedin.png" />
+        <img class="social" src="/omospondia-basket/linkedin.png"/>
       </network>
 
       <network network="twitter">
-        <img class="social" src="/../twitter.png" />
+        <img class="social" src="/omospondia-basket/twitter.png"/>
       </network>
       </div>
     </social-sharing>

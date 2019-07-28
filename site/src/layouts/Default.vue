@@ -5,7 +5,7 @@
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <img src="/../basketball.png" class="ball"/>
+        <img src="/omospondia-basket/basketball.png" class="ball"/>
 
         <span class="md-title" style="">{{ title }}</span>
       </md-app-toolbar>
