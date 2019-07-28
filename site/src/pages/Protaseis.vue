@@ -35,12 +35,12 @@ export default {
         //{ property: 'article:published_time', content: moment(this.$page.post.date).format('YYYY-MM-DD') },
         //{ property: 'og:image', content: this.ogImageUrl },
         { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:title', content: this.$page.post.title },
+        { name: 'twitter:title', content: this.title },
         //{ name: 'twitter:description', content: this.description(this.$page.post) },
         { name: 'twitter:site', content: '@v_ntakouris' },
         { name: 'twitter:creator', content: '@v_ntakouris' },
         //{ name: 'twitter:image', content: this.ogImageUrl },
-      ],
+      ]
     }
   }
 }
