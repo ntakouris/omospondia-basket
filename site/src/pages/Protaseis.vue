@@ -1,11 +1,7 @@
 <template>
   <Layout :title="'12 Προτάσεις για μια Ομοσπονδία συμμετοχής και ανάπτυξης'">
     <div class="grid">
-      <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :title="protasi.title">
-          <ul>
-            <li v-for="item in protasi.items" :key="item">{{ item }}</li>
-          </ul>
-      </ProtasiCard>
+      <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :protasi="protasi" />
     </div>
 
   </Layout>

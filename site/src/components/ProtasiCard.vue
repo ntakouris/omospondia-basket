@@ -1,36 +1,75 @@
 <template>
-  <md-card md-with-hover :class="collapsed ? 'smallflex' : 'bigflex'">
+  <md-card :md-elevation="1" md-with-hover :class="collapsed ? 'smallflex' : 'bigflex'" :id="protasi.id">
         <md-card-header>
-          <div class="md-title">{{ title }}</div>
+          <div class="md-title">{{ protasi.title }}</div>
         </md-card-header>
 
         <md-card-content :class="collapsed ? 'collapsed' : 'uncollapsed'">
-        <slot class="main-content"/>
+          <ul>
+            <li v-for="item in protasi.items" :key="item">{{ item }}</li>
+          </ul>
 
         <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent"> εδω</md-button></p>
         </md-card-content>
         
         <md-card-actions>
-          <md-button @click="toggleCollapsed"> {{ collapsed ? 'Περισσοτερα' : 'Λιγοτερα'}}</md-button>
-          <md-button class="md-icon-button" @click="toggleCollapsed">
+          <md-button :class="(!collapsed ? '' : 'md-primary')" @click="toggleCollapsed"> {{ collapsed ? 'Περισσοτερα' : 'Λιγοτερα'}}</md-button>
+          <md-button :class="'md-icon-button ' + (!collapsed ? '' : 'md-primary')" @click="toggleCollapsed">
             <md-icon>{{ collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</md-icon>
           </md-button>
+
+          <md-button @click="share()"> Μοιρασου</md-button>
+          <md-button class="md-icon-button" @click="share()">
+            <md-icon>share</md-icon>
+          </md-button>
         </md-card-actions>
+
+        <md-snackbar :md-duration="10000" :md-active.sync="showSnackbar" md-persistent>
+          <span>Επιτυχής αντιγραφή συνδέσμου διαμοίρασης. Κάντε επικόλληση για να στείλετε τον σύνδεσμο.</span>
+          <md-button class="md-primary" @click="showSnackbar = false">Ok</md-button>
+      </md-snackbar>
   </md-card>
 </template>
 
 <script>
 export default {
   name: 'ProtasiCard',
-  props: ['title'],
+  props: ['protasi'],
   data () {
     return {
-      collapsed: true
+      collapsed: true,
+      showSnackbar: false,
+    }
+  },
+  mounted () {
+    const hash = document.location.hash.slice(1)
+    if (hash && hash === this.protasi.id) {
+      this.collapsed = false
     }
   },
   methods: {
     toggleCollapsed: function () {
       this.collapsed = !this.collapsed
+    },
+    share: function () {
+      document.location.hash = this.protasi.id
+      const link = document.location.href
+      this.copyToClipboard(link)
+      this.showSnackbar = true
+    },
+    copyToClipboard: function (text) {
+      // Create an element with position -9999 px, focus it's content, copy the content, remove it
+      const el = document.createElement('textarea')
+      el.value = text
+      el.setAttribute('readonly', '')
+      el.style = {
+        position: 'absolute',
+        left: '-9999px'
+      }
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      document.body.removeChild(el)
     }
   }
 }
@@ -54,7 +93,7 @@ ul {
   font-size: 18px;
 }
 .collapsed {
-  max-height: 80px;
+  max-height: 90px;
   overflow: hidden;
 }
 

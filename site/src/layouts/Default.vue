@@ -65,6 +65,10 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+
 @import "~vue-material/dist/theme/engine";
 
 @include md-register-theme("default", (
