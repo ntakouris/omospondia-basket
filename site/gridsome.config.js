@@ -7,6 +7,6 @@
 module.exports = {
   siteName: 'Omospondia Basket',
   plugins: [],
-  siteUrl: "http://basket12.gr",
+  siteUrl: "https://basket12.gr",
   pathPrefix: '',
 }
