@@ -6,7 +6,14 @@
 
 module.exports = {
   siteName: 'Omospondia Basket',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-146595323-1'
+      }
+    }
+  ],
   siteUrl: "https://basket12.gr",
   pathPrefix: '',
 }
