@@ -1,9 +1,5 @@
 <template>
   <Layout :title="title">   
-    <Timeline class="tweetline" id="v_ntakouris" sourceType="profile" :options="{ tweetLimit: '2' }">
-      Loading Tweets...
-    </Timeline>
-
     <section>
       Όλοι γνωρίζουμε πολύ καλά, πως το όμορφο περιτύλιγμα ορισμένων μεγάλων καλαθοσφαιρικών επιτυχιών σε εθνικό
       και σωματειακό επίπεδο, δεν μπορεί πλέον να συνεχίζει να καλύπτει την διοικητική και οργανωτική παρακμή της
@@ -37,18 +33,12 @@
       Μέλος της Ελληνικής Επιστημονικής Εταιρείας Διοίκησης Αθλητισμού και Αναψυχής<br />
       Ειδικός Συνεργάτης στην Γενική Γραμματεία Αθλητισμού το 2010 και 2011 <br /></i>
     </section>
-
   </Layout>
 </template>
 
 <script>
-import {Timeline} from 'vue-tweet-embed'
-
 export default {
   name: 'About',
-  components: {
-    Timeline
-  },
   data () {
     return {
       title: 'Για μια ομοσπονδία συμμετοχής και ανάπτυξης με διαφάνεια'
@@ -83,8 +73,4 @@ export default {
 
 
 <style>
-.tweetline {
-  margin: 32px;
-  max-width: 40vw;
-}
 </style>
