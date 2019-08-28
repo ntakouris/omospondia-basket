@@ -1,5 +1,9 @@
 <template>
   <Layout :title="title">   
+    <Timeline class="tweetline" id="v_ntakouris" sourceType="profile" :options="{ tweetLimit: '2' }">
+      Loading Tweets...
+    </Timeline>
+
     <section>
       Όλοι γνωρίζουμε πολύ καλά, πως το όμορφο περιτύλιγμα ορισμένων μεγάλων καλαθοσφαιρικών επιτυχιών σε εθνικό
       και σωματειακό επίπεδο, δεν μπορεί πλέον να συνεχίζει να καλύπτει την διοικητική και οργανωτική παρακμή της
@@ -38,11 +42,16 @@
 </template>
 
 <script>
+import {Timeline} from 'vue-tweet-embed'
+
 export default {
   name: 'About',
+  components: {
+    Timeline
+  },
   data () {
     return {
-      title: 'Για μια ομοσπονδία συμμετοχής και ανάπτυξης'
+      title: 'Για μια ομοσπονδία συμμετοχής και ανάπτυξης με διαφάνεια'
     }
   },
   metaInfo () {
@@ -74,4 +83,8 @@ export default {
 
 
 <style>
+.tweetline {
+  margin: 32px;
+  max-width: 40vw;
+}
 </style>

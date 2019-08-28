@@ -12,7 +12,7 @@
             </li>
           </ul>
 
-        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent"> εδω</md-button></p>
+        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent" :href="feedbackFormUrl"> εδω</md-button></p>
         </md-card-content>
         
         <md-card-actions>
@@ -31,7 +31,8 @@
     <md-dialog :md-active.sync="showDialog">
     <social-sharing :url="getSharingLink()"
                           :title="protasi.title"
-                          :description="protasi.items[0]"
+                          :description="protasi.title"
+                          :quote="protasi.title"
                           hashtags="basketgr"
                           twitter-user="v_ntakouris"
                           inline-template
@@ -75,7 +76,8 @@ export default {
     return {
       collapsed: true,
       showDialog: false,
-      showSnackbar: false
+      showSnackbar: false,
+      feedbackFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc9oE-wt_siyXiV6lmuTllL5nPfWui8nvI7c_sdZC2EroxfLw/viewform?fbclid=IwAR1HR893dnk9MU2r7pGShAgh271Mo9B_lcjdcSNT2ofiEgUl1NksNjeaDTQ'
     }
   },
   mounted () {
