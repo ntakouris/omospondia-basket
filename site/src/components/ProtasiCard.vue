@@ -6,7 +6,10 @@
 
         <md-card-content :class="collapsed ? 'collapsed' : 'uncollapsed'">
           <ul>
-            <li v-for="item in protasi.items" :key="item">{{ item }}</li>
+            <li v-for="item in protasi.items" :key="item">
+              <a v-if="typeof(item) === 'object'" :href="item.href" target="_blank"> {{ item.display }} </a>
+              <div v-else>{{ item }}</div>
+            </li>
           </ul>
 
         <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent"> εδω</md-button></p>
@@ -35,15 +38,15 @@
                           style="display: flex; justify-content: space-between;">
       <div>
       <network network="facebook">
-        <img class="social" src="/omospondia-basket/facebook.png"/>
+        <img class="social" src="/facebook.png"/>
       </network>
 
       <network network="linkedin">
-        <img class="social" src="/omospondia-basket/linkedin.png"/>
+        <img class="social" src="/linkedin.png"/>
       </network>
 
       <network network="twitter">
-        <img class="social" src="/omospondia-basket/twitter.png"/>
+        <img class="social" src="/twitter.png"/>
       </network>
       </div>
     </social-sharing>

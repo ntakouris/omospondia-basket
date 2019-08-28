@@ -1,13 +1,13 @@
 <template>
   <div class="page-container md-layout-row">
     <md-app>
-      <md-app-toolbar class="md-primary md-toolbar-row md-toolbar-offset" md-elevation="0">
+      <md-app-toolbar class="md-primary md-toolbar-row md-toolbar-offset toolbar" md-elevation="0">
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <img src="/basketball.png" class="ball"/>
+        <img src="/basketball.png" style="margin-right: 12px;" class="ball"/>
 
-        <span class="md-title" style="">{{ title }}</span>
+        <span class="md-title" style="">basket12.gr</span>
       </md-app-toolbar>
 
       <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
@@ -30,6 +30,7 @@
       </md-app-drawer>
 
       <md-app-content class="md-scrollbar content">
+        <h1 class="title">{{ title }}</h1>
         <slot />
       </md-app-content>
     </md-app>
@@ -91,7 +92,6 @@ a:hover {
 .md-title {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .md-app {
@@ -108,5 +108,10 @@ a:hover {
   margin-right: 20px;
   width: 32px;
   height: 32px;
+}
+
+.md-content .title{
+  margin-top: 0px;
+  line-height: 28px;
 }
 </style>
