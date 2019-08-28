@@ -1,3 +1,3 @@
-# omospondia-basket
+# Για μία ομοσπονδία συμμετοχής και ανάπτυξης
 
-[Click me](https://zarkopafilis.github.io/omospondia-basket/)
+[basket12.gr](https://basket12.gr)
