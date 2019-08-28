@@ -33,7 +33,7 @@
         <h1 class="title">{{ title }}</h1>
         <slot />
 
-        <hr style="margin-top: 16px; margin-bottom: 16px;"/>
+        <hr style="margin-top: 32px; margin-bottom: 32px;"/>
         <!-- Tweets -->
         <div class="tweetline-container">
           <Timeline class="tweetline" id="v_ntakouris" sourceType="profile" :options="{ tweetLimit: '3', width: 550, height: 200}">
@@ -128,6 +128,6 @@ a:hover {
 .tweetline-container {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 16px;
+  margin-top: 32px;
 }
 </style>
