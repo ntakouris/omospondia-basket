@@ -110,8 +110,8 @@ a:hover {
 }
 
 .md-drawer {
-  width: 200px;
-  max-width: calc(100vw - 125px);
+  width: 180px;
+  max-width: calc(100vw - 140px);
 }
 
 .ball {
