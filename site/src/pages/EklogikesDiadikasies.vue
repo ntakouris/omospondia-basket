@@ -1,10 +1,10 @@
 <template>
   <Layout :title="title">
     <a v-for="diadikasia in eklogikesDiadikasies" :key="diadikasia.title" :href="diadikasia.href" target="_blank" class="diadikasia-card">
-    <md-card class="md-elevation-12">
+    <md-card class="md-elevation-12" style="margin-left: 0;">
       <md-ripple>
-          <md-card-header style="max-height: 120px; overflow: hidden;">
-              <div class="md-title">{{ diadikasia.title }}</div>
+          <md-card-header>
+              <div class="md-title" :style="diadikasia.href !== '' ? 'color:blue;' : ''">{{ diadikasia.title }}</div>
           </md-card-header>
         </md-ripple>
     </md-card>
@@ -41,6 +41,6 @@ export default {
 
 <style scoped>
 .diadikasia-card {
-  margin: 25px;
+  margin: 0 25px 25px 25px;
 }
 </style>

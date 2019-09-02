@@ -5,7 +5,7 @@
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
-        <img src="/basketball.png" style="margin-right: 12px;" class="ball"/>
+        <img src="/basketball.png" style="margin-right: 12px; display: inline-block;" class="ball"/>
 
         <span class="md-title" style="font-size: 18px;">basket12.gr - Για μια ομοσπονδία συμμετοχής και ανάπτυξης με διαφάνεια</span>
       </md-app-toolbar>
@@ -97,11 +97,6 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
   color: purple;
-}
-
-.md-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .md-app {
