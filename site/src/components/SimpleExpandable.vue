@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div>{{ title }}</div>
-    <div style="margin-left: 12px;">
+    <div @click="toggleCollapsed()" class="expandable-header">{{ title }} <md-icon>{{ collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</md-icon></div>
+    <div style="margin-left: 12px;" v-if="!collapsed">
       <slot />
     </div>
   </div>
@@ -24,5 +24,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.expandable-header {
+  color: blue;
+}
+.expandable-header:hover {
+  cursor: pointer;
+}
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div class="page-container md-layout-row">
-    <md-app>
+    <md-app id="app-container">
       <md-app-toolbar class="md-primary md-toolbar-row md-toolbar-offset toolbar" md-elevation="0">
         <md-button class="md-icon-button" @click="toggleMenu" v-if="!menuVisible">
           <md-icon>menu</md-icon>
         </md-button>
         <img src="/basketball.png" style="margin-right: 12px;" class="ball"/>
 
-        <span class="md-title" style="">basket12.gr</span>
+        <span class="md-title" style="font-size: 18px;">basket12.gr - Για μια ομοσπονδία συμμετοχής και ανάπτυξης με διαφάνεια</span>
       </md-app-toolbar>
 
-      <md-app-drawer :md-active.sync="menuVisible" md-persistent="full">
+      <md-app-drawer :md-active.sync="menuVisible" md-persistent="full" id="drawer">
           <md-toolbar class="md-transparent" md-elevation="0">
             <CompositeLink :link="{ glink: '/' }" class="md-toolbar-section-start"><span style="color: black;">Αρχική Σελίδα</span></CompositeLink>
             <md-button class="md-icon-button md-dense md-toolbar-section-end" @click="toggleMenu" v-if="menuVisible">
@@ -109,15 +109,14 @@ a:hover {
   border: 1px solid rgba(#000, .12);
 }
 
-.md-drawer {
-  width: 180px;
-  max-width: calc(100vw - 140px);
-}
-
 .ball {
   margin-right: 20px;
   width: 32px;
   height: 32px;
+}
+
+#drawer {
+  max-width: 360px;
 }
 
 .md-content .title{

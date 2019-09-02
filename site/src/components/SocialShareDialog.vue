@@ -5,7 +5,7 @@
                           :title="title"
                           :description="title"
                           :quote="title"
-                          hashtags="basketgr"
+                          hashtags="basket12"
                           twitter-user="v_ntakouris"
                           inline-template
                           style="display: flex; justify-content: space-between;">

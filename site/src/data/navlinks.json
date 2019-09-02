@@ -17,7 +17,7 @@
     {
         "icon": "view_agenda",
         "text": "Άρθρα",
-        "href": "https://ntakouris.wordpress.com/author/ntakourisbas/"
+        "glink": "/arthra"
     },
     {
         "icon": "info",
