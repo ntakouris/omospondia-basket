@@ -1,22 +1,18 @@
 <template>
   <Layout :title="title">
-    <a v-for="diadikasia in eklogikesDiadikasies" :key="diadikasia.title" :href="diadikasia.href" target="_blank" class="diadikasia-card">
-    <md-card class="md-elevation-12" style="margin-left: 0;">
-      <md-ripple>
-          <md-card-header>
-              <div class="md-title" :style="diadikasia.href !== '' ? 'color:blue;' : ''">{{ diadikasia.title }}</div>
-          </md-card-header>
-        </md-ripple>
-    </md-card>
-    </a>
+    <EklogikiCard v-for="diadikasia in eklogikesDiadikasies" :key="diadikasia.title" :diadikasia="diadikasia"/>
   </Layout>
 </template>
 
 <script>
 import eklogikesDiadikasies from '~/data/eklogikesDiadikasies.json'
+import EklogikiCard from '~/components/EklogikiCard.vue'
 
 export default {
   name: 'EklogikesDiadikasies',
+  components: {
+    EklogikiCard
+  },
   data () {
     return {
       eklogikesDiadikasies,
@@ -40,7 +36,5 @@ export default {
 </script>
 
 <style scoped>
-.diadikasia-card {
-  margin: 0 25px 25px 25px;
-}
+
 </style>

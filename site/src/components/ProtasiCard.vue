@@ -98,14 +98,6 @@ export default {
 </script>
 
 <style>
-.social {
-  width: 48px;
-  height: 48px;
-  margin: 8px;
-}
-.social:hover {
-  cursor: pointer;
-}
 .main-content {
   text-overflow: ellipsis;
   white-space: nowrap;
