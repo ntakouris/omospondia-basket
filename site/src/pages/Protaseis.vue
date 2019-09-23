@@ -23,23 +23,14 @@ export default {
     return {
       title: this.title,
       meta: [
-        // {
-        //   key: 'description',
-        //   name: 'description',
-        //   content: this.description(this.$page.post)
-        // },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: this.title },
-        //{ property: 'og:description', content: this.description(this.$page.post) },
-        //{ property: 'og:url', content: this.postUrl },
-        //{ property: 'article:published_time', content: moment(this.$page.post.date).format('YYYY-MM-DD') },
-        //{ property: 'og:image', content: this.ogImageUrl },
+        { property: 'og:image', content: '/protaseis.jpg'},
+        { name: 'twitter:image', content: '/protaseis.jpg'},
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:title', content: this.title },
-        //{ name: 'twitter:description', content: this.description(this.$page.post) },
         { name: 'twitter:site', content: '@v_ntakouris' },
         { name: 'twitter:creator', content: '@v_ntakouris' }
-        //{ name: 'twitter:image', content: this.ogImageUrl },
       ]
     }
   }
