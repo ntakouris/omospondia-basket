@@ -1,24 +1,17 @@
 <template>
-  <div>
-    <md-card class="md-elevation-4" style="margin-left: 0;">
+  <div class="card">
+    <md-card class="md-elevation-4 diadikasia-card" style="margin-left: 0;">
       <md-ripple>
-        <md-card-header :id="arthro.slug">
-          <div class="md-title">{{ arthro.display }}</div>
-          <div class="md-subhead">{{ arthro.subhead }}</div>
+        <md-card-header>
+          <a :href="kataggelia.href" target="_blank" :id="kataggelia.slug">
+            <div class="md-title">{{ kataggelia.display }}</div>
+          </a>
+
+          <div class="md-subhead">{{ kataggelia.date }}</div>
         </md-card-header>
       </md-ripple>
 
       <md-card-actions>
-        <md-button :href="arthro.source" target="_blank">
-          ΠΗΓΗ
-          <md-icon style="margin-left: 4px;">center_focus_strong</md-icon>
-        </md-button>
-
-        <md-button :href="arthro.href">
-          ΠΡΟΒΟΛΗ
-          <md-icon style="margin-left: 4px;">archive</md-icon>
-        </md-button>
-
         <md-button @click="openSharingDialog()">Μοιρασου</md-button>
         <md-button class="md-icon-button" @click="openSharingDialog()">
           <md-icon>share</md-icon>
@@ -26,7 +19,7 @@
       </md-card-actions>
     </md-card>
 
-    <SocialShareDialog :title="arthro.display" :url="getSharingUrl()" :trigger="triggerDialog" />
+    <SocialShareDialog :title="kataggelia.display" :url="getSharingUrl()" :trigger="triggerDialog" />
   </div>
 </template>
 
@@ -35,11 +28,11 @@ import config from "~/data/config.json";
 import SocialShareDialog from "./SocialShareDialog.vue";
 
 export default {
-  name: "ArthroCard",
+  name: "KataggeliaCard",
   components: {
     SocialShareDialog
   },
-  props: ["arthro"],
+  props: ["kataggelia"],
   data() {
     return {
       triggerDialog: false
@@ -48,7 +41,7 @@ export default {
   methods: {
     getSharingUrl() {
       const base = config.baseUrl;
-      const url = `${base}/arthra#${this.arthro.slug}`;
+      const url = `${base}/kataggelies#${this.kataggelia.slug}`;
       return url;
     },
     openSharingDialog() {
@@ -59,7 +52,20 @@ export default {
 </script>
 
 <style scoped>
-.md-card {
-  padding-bottom: 12px;
+.card {
+  padding-bottom: 6px;
+}
+.md-card-header {
+  padding: 0px 16px 0px 16px;
+  margin-bottom: 0px;
+}
+.md-title {
+  margin-top: 6px;
+  font-size: 18px;
+  line-height: 120%;
+}
+.md-card-actions {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 </style>

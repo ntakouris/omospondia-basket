@@ -1,16 +1,23 @@
 <template>
   <Layout :title="title">   
     <section>
-        Προσεχώς
+        <KataggeliaCard v-for="k in kataggelies" :key="k.href" :kataggelia="k"/>
     </section>
   </Layout>
 </template>
 
 <script>
+import kataggelies from '~/data/kataggelies.json'
+import KataggeliaCard from '~/components/KataggeliaCard.vue'
+
 export default {
-  name: 'Katagelies',
+  name: 'Kataggelies',
+  components: {
+    KataggeliaCard
+  },
   data () {
     return {
+      kataggelies,
       title: 'Δημόσιες Καταγγελίες'
     }
   },
@@ -33,5 +40,5 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 </style>
