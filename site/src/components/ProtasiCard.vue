@@ -22,7 +22,7 @@
             </li>
           </ul>
 
-        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων, προβλημάτων και καταγγελιών<md-button class="md-raised md-accent" :href="feedbackFormUrl" target="_blank"> εδω</md-button></p>
+        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων ή προβλημάτων <md-button class="md-raised md-accent" :href="feedbackFormUrl" target="_blank"> εδω</md-button></p>
         </md-card-content>
         
         <md-card-actions>
