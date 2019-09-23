@@ -15,9 +15,19 @@
         "glink": "/katagelies"
     },
     {
+        "icon": "library_books",
+        "text": "Αποδελτίωση τύπου",
+        "glink": "/apodeltiosi"
+    },
+    {
         "icon": "view_agenda",
-        "text": "Άρθρα",
+        "text": "Επιστημονικά άρθρα",
         "glink": "/arthra"
+    },
+    {
+        "icon": "sports_basketball",
+        "text": "Πρωτοβουλίες",
+        "glink": "/protovoulies"
     },
     {
         "icon": "info",
