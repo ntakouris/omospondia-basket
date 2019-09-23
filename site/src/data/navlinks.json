@@ -16,12 +16,12 @@
     },
     {
         "icon": "library_books",
-        "text": "Αποδελτίωση τύπου",
+        "text": "Αποδελτίωση Τύπου",
         "glink": "/apodeltiosi"
     },
     {
         "icon": "view_agenda",
-        "text": "Επιστημονικά άρθρα",
+        "text": "Επιστημονικά Άρθρα",
         "glink": "/arthra"
     },
     {
