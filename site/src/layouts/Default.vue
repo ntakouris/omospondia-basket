@@ -22,7 +22,7 @@
             <md-divider class="md-inset"/>
 
             <md-list-item>
-              <md-icon>{{ link.icon }}</md-icon>
+              <md-icon class="menu-icon">{{ link.icon }}</md-icon>
               <span class="md-list-item-text">{{ link.text }}</span>
             </md-list-item>
           </CompositeLink>
@@ -113,5 +113,10 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
+}
+
+.menu-icon {
+  margin-left: 8px !important;
+  margin-right: 32px !important;
 }
 </style>
