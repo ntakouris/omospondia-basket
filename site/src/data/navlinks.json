@@ -1,4 +1,10 @@
 [
+
+    {
+        "icon": "info",
+        "text": "Σχετικά",
+        "glink": "/"
+    },
     {
         "icon": "announcement",
         "text": "12 Προτάσεις συμμετοχής και ανάπτυξης",
@@ -30,8 +36,8 @@
         "glink": "/protovoulies"
     },
     {
-        "icon": "info",
-        "text": "About",
-        "glink": "/"
+        "icon": "rss_feed",
+        "text": "Επικαιρότητα - Tweets",
+        "glink": "/tweets"
     }
 ]

@@ -32,14 +32,6 @@
       <md-app-content class="md-scrollbar content">
         <h1 class="title">{{ title }}</h1>
         <slot />
-
-        <hr style="margin-top: 32px; margin-bottom: 32px;"/>
-        <!-- Tweets -->
-        <div class="tweetline-container">
-          <Timeline class="tweetline" id="v_ntakouris" sourceType="profile" :options="{ tweetLimit: '3', width: 550, height: 200}">
-            Loading Tweets...
-          </Timeline>
-        </div>
       </md-app-content>
     </md-app>
   </div>
@@ -48,13 +40,11 @@
 <script>
 import navlinks from '~/data/navlinks.json'
 import CompositeLink from '~/components/CompositeLink.vue'
-import {Timeline} from 'vue-tweet-embed'
 
 export default {
   name: 'Default',
   components: {
-    CompositeLink,
-    Timeline
+    CompositeLink
   },
   props: ['title'],
   data: () => ({

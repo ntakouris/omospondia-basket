@@ -1,21 +1,19 @@
 <template>
   <Layout :title="title">
-    <ProtasiCard v-for="protasi in protaseis" :key="protasi.title" class="card" :protasi="protasi" />
+    <ProtaseisContainer />
   </Layout>
 </template>
 
 <script>
-import ProtasiCard from '~/components/ProtasiCard.vue'
-import protaseis from '~/data/protaseis.json'
+import ProtaseisContainer from '~/components/ProtaseisContainer.vue'
 
 export default {
   name: 'Protaseis',
   components: {
-    ProtasiCard
+    ProtaseisContainer
   },
   data () {
     return {
-      protaseis,
       title: '12 Προτάσεις για μια Ομοσπονδία συμμετοχής και ανάπτυξης'
     }
   },
