@@ -3,7 +3,7 @@
     <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
         <md-card-header :id="arthro.slug">
-          <div class="md-title">{{ arthro.display }}</div>
+          <a class="md-title" :href="arthro.href" target="_blank">{{ arthro.display }}</a>
           <div class="md-subhead">{{ arthro.subhead }}</div>
         </md-card-header>
       </md-ripple>
