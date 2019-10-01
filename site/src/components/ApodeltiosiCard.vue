@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <md-card class="md-elevation-4 diadikasia-card" style="margin-left: 0;">
+    <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
         <md-card-header>
           <a :href="apodeltiosi.href" target="_blank" :id="apodeltiosi.slug">

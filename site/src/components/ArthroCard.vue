@@ -1,6 +1,6 @@
 <template>
   <div>
-    <md-card class="md-elevation-4" style="margin-left: 0;">
+    <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
         <md-card-header :id="arthro.slug">
           <div class="md-title">{{ arthro.display }}</div>
