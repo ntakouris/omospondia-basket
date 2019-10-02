@@ -25,7 +25,7 @@
     </social-sharing>
 
       <md-dialog-actions>
-        <md-button class="md-accent" @click="copySharingUrl()">Αντιγραφη συνδεσμου</md-button>
+        <md-button class="md-raised md-accent" @click="copySharingUrl()">Αντιγραφη συνδεσμου</md-button>
         <md-button @click="showDialog = false">OK</md-button>
       </md-dialog-actions>
 
