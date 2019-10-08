@@ -25,7 +25,7 @@ export default {
         { property: 'og:title', content: this.title },
         { property: 'og:image', content: '/protaseis.jpg'},
         { name: 'twitter:image', content: 'https://basket12.gr/protaseis.jpg'},
-        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: this.title },
         { name: 'twitter:site', content: '@v_ntakouris' },
         { name: 'twitter:creator', content: '@v_ntakouris' }
