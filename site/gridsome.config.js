@@ -14,6 +14,6 @@ module.exports = {
       }
     }
   ],
-  siteUrl: "https://basket12.gr",
+  siteUrl: "https://basket12.gr/",
   pathPrefix: '',
 }
