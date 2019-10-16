@@ -3,6 +3,7 @@
     <section>
         <ArthroCard v-for="a in arthra" :key="a.href" :arthro="a"/>
     </section>
+    <div class="anchor-pad-bot"/>
   </Layout>
 </template>
 

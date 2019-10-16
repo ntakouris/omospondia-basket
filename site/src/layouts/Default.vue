@@ -109,6 +109,10 @@ a:hover {
   line-height: 28px;
 }
 
+.anchor-pad-bot {
+  height: 100%;
+}
+
 .tweetline-container {
   margin-left: auto;
   margin-right: auto;

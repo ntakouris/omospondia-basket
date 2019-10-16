@@ -3,6 +3,7 @@
     <section>
         <ApodeltiosiCard v-for="a in apodeltiosi" :key="a.href" :apodeltiosi="a"/>
     </section>
+    <div class="anchor-pad-bot"/>
   </Layout>
 </template>
 

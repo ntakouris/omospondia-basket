@@ -1,6 +1,7 @@
 <template>
   <Layout :title="title">
     <ProtaseisContainer />
+    <div class="anchor-pad-bot"/>
   </Layout>
 </template>
 

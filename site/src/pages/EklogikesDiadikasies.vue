@@ -1,6 +1,7 @@
 <template>
   <Layout :title="title">
     <EklogikiCard v-for="diadikasia in eklogikesDiadikasies" :key="diadikasia.title" :diadikasia="diadikasia"/>
+    <div class="anchor-pad-bot"/>
   </Layout>
 </template>
 
