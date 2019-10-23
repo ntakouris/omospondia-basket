@@ -3,7 +3,7 @@
         "display": "Συνέντευξη του Βασίλη Ντάκουρη στον Γιάννη Ψαράκη και στην Live Sport",
         "content": "Πως χειραγωγεί ακόμα και τις εκλογικές διαδικασίες η ηγετική ομάδα της ομοσποπονδίας. Η υποψηφιότητα. Οι καταγγελίες για την ολοκληρωτική αδιαφάνεια, οι προτάσεις και αρκετά άλλα!",
         "author": "Γιάννης Ψαράκης",
-        "date": "14/01/2019",
+        "date": "14/10/2019",
         "href": "https://ntakouris.wordpress.com/2019/10/14/916/",
         "slug": "sinentefksi-ntakouris-livesport"
     },
@@ -36,6 +36,13 @@
         "slug": "paramagaza-mikroi"
     },
     {
+        "display": "Εκλογές φαντασμα(γορικές)",
+        "author": "Γιάννης Ψαράκης",
+        "date": "27/09/2018",
+        "href": "https://basketballguru.gr/articles/item/883-ekloges-eok",
+        "slug": "ekloges-fantasma"
+    },
+    {
         "display": "Γκόντας ο Αμερικανός",
         "author": "Γιάννης Φιλέρης",
         "content": "Μια συζήτηση για τη διαιτησία σε ΝΒΑ, Euroleague και βέβαια στην Ελλαδίτσα μας.",
@@ -44,11 +51,12 @@
         "slug": "gkontas-amerikanos"
     },
     {
-        "display": "Εκλογές φαντασμα(γορικές)",
-        "author": "Γιάννης Ψαράκης",
-        "date": "27/09/2018",
-        "href": "https://basketballguru.gr/articles/item/883-ekloges-eok",
-        "slug": "ekloges-fantasma"
+        "display": "Συνέντευξη του Βασίλη Ντάκουρη στο περιοδικό All Star Basket",
+        "content": "Παρηκμασμένο το μοντέλο της ΕΟΚ. Έχει ξενικήσει ένα μοναχικό αγώνα απέναντι στο «κράτος» του Βασιλακόπουλου. Ο πρώην διεθνής παίχτης του Πανελληνίου για το κίνητρο και τους στόχους του.",
+        "author": "Δημήτρης Καρύδας",
+        "date": "30/03/2018",
+        "href": "https://ntakouris.wordpress.com/2018/03/30/παρηκμασμένο-το-μοντέλο-της-εοκ-συν/",
+        "slug": "sinentefksi-ntakouris-allstarbasket"
     },
     {
         "display": "΄Ενστασις, κύριε πρόεδρε!",
