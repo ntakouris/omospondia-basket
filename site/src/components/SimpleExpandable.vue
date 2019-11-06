@@ -10,11 +10,18 @@
 <script>
 export default {
   name: 'SimpleExpandable',
-  props: ['title'],
+  props: ['title', 'slugs'],
   data () {
     return {
       collapsed : true
     }
+  },
+  mounted () {
+  const hash = document.location.hash.slice(1)
+
+  if (hash && this.slugs.includes(hash)) {
+    this.collapsed = false
+  }
   },
   methods: {
     toggleCollapsed() {

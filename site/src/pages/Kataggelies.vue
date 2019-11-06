@@ -2,8 +2,8 @@
   <Layout :title="title">   
     <section>
         <KataggeliaCard v-for="k in kataggelies" :key="k.href" :kataggelia="k"/>
-        <div class="anchor-pad-bot"/>
     </section>
+    <div class="anchor-pad-bot"/>
   </Layout>
 </template>
 

@@ -23,6 +23,7 @@
                 "urls": [
                     {
                         "title": "Η ανάπτυξη του αγωνίσματος 3Χ3 δεν μπορεί να περιμένει άλλο. Δέκα προτάσεις!",
+                        "slug": "anaptiksi-3x3",
                         "href": "https://ntakouris.wordpress.com/2019/10/29/%CE%B7-%CE%B1%CE%BD%CE%AC%CF%80%CF%84%CF%85%CE%BE%CE%B7-%CF%84%CE%BF%CF%85-%CE%B1%CE%B3%CF%89%CE%BD%CE%AF%CF%83%CE%BC%CE%B1%CF%84%CE%BF%CF%82-3%CF%873-%CE%B4%CE%B5%CE%BD-%CE%BC%CF%80%CE%BF%CF%81%CE%B5/"
                     }
                 ]
@@ -47,6 +48,7 @@
                 "urls": [
                     {
                         "title": "Ορισμένες καλές πρακτικές για την οργάνωση και τη διοίκηση των σωματείων",
+                        "slug": "orismenes-praktikes",
                         "href": "https://ntakouris.wordpress.com/2018/01/20/%ce%ba%ce%b1%ce%bb%ce%ad%cf%82-%cf%80%cf%81%ce%b1%ce%ba%cf%84%ce%b9%ce%ba%ce%ad%cf%82-%ce%b3%ce%b9%ce%b1-%cf%84%ce%b7%ce%bd-%ce%bf%cf%81%ce%b3%ce%ac%ce%bd%cf%89%cf%83%ce%b7-%ce%ba%ce%b1%ce%b9-%ce%b4/?fbclid=IwAR1Q_ukHgNZYn_MCbphgCBED2S1jUPg7XLdZrNec_CKeeaV9Pz383IyZnMQ"
                     }
                 ]
@@ -108,6 +110,7 @@
                 "urls": [
                     {
                         "title": "Προτάσεις για γίνει το Κύπελλο Ελλάδος γιορτή ανάπτυξης",
+                        "slug": "kypelo-anaptiksi",
                         "href": "https://ntakouris.wordpress.com/2018/02/08/%ce%bc%ce%b5%cf%81%ce%b9%ce%ba%ce%ad%cf%82-%cf%80%cf%81%ce%bf%cf%84%ce%ac%cf%83%ce%b5%ce%b9%cf%82-%ce%b3%ce%b9%ce%b1-%ce%b3%ce%af%ce%bd%ce%b5%ce%b9-%cf%84%ce%bf-%ce%ba%cf%8d%cf%80%ce%b5%ce%bb%ce%bb/"
                     }
                 ]

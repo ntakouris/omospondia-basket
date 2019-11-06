@@ -8,13 +8,13 @@
           <ul>
             <li v-for="item in protasi.items" :key="typeof(item) === 'object' ? item.display : item">
               
-              <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display">
+              <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)">
                 <div v-for="url in item.urls" :key="url.title">
                   <a :href="url.href" target="_blank" style="display: inline-block;">
                     {{ url.title }}
                   </a>
 
-                  <UrlShareButton :title="url.title" :url="url.href"/>
+                  <UrlShareButton :title="url.title" :url="getSharingUrl(url.slug)"/>
                 </div>
               </SimpleExpandable>
 
@@ -38,7 +38,7 @@
         </md-card-actions>
 
       <!-- Dialog -->
-      <SocialShareDialog :url="getSharingUrl()" :title="protasi.title" :trigger="triggerDialog"/>
+      <SocialShareDialog :url="getSharingUrl(this.protasi.id)" :title="protasi.title" :trigger="triggerDialog"/>
 
   </md-card>
 </template>
@@ -66,14 +66,19 @@ export default {
   },
   mounted () {
     const hash = document.location.hash.slice(1)
-    if (hash && hash === this.protasi.id) {
+    const allContainedChildSlugs = this.protasi.items
+      .filter(item => typeof(item) === 'object').map(expandable => expandable.urls)
+      .flat(1).map(url => url.slug)
+    
+    allContainedChildSlugs.push(this.protasi.id)
+    if (hash && allContainedChildSlugs.includes(hash)) {
       this.collapsed = false
     }
   },
   methods: {
-    getSharingUrl: function () {
+    getSharingUrl: function (slug) {
       const base = config.baseUrl
-      const url = `${base}/protaseis#${this.protasi.id}`
+      const url = `${base}/protaseis#${slug}`
       return url
     },
     toggleCollapsed: function () {
