@@ -11,7 +11,7 @@
               <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)"
                   @expand="childExpanded">
                 <div v-for="url in item.urls" :key="url.title">
-                  <a :href="url.href" target="_blank" style="display: inline-block;">
+                  <a :href="url.href" target="_blank" style="display: inline-block;" :id="url.slug">
                     {{ url.title }}
                   </a>
 
@@ -100,8 +100,6 @@ export default {
       document.location.hash = this.protasi.id
     },
     childExpanded: function (value) {
-      console.log('parentexpand')
-
       if (value && this.collapsed) {
         this.toggleCollapsed()
       }

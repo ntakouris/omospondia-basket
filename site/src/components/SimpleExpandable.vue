@@ -1,7 +1,7 @@
 <template>
   <div>
     <div @click="toggleCollapsed()" class="expandable-header">{{ title }} <md-icon>{{ collapsed ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</md-icon></div>
-    <div style="margin-left: 12px;" v-if="!collapsed">
+    <div style="margin-left: 12px;" :class="{ display: (this.collapsed ? 'hidden' : 'inherit')}">
       <slot />
     </div>
   </div>
