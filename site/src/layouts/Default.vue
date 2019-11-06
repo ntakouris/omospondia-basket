@@ -58,8 +58,8 @@ export default {
     }
   },
   mounted () {
-    if (window.innerWidth < 730) {
-      this.menuVisible = false
+    if (window.innerWidth >= 730) {
+      this.menuVisible = true
     }
   }
 }
