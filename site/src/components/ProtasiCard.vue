@@ -8,7 +8,8 @@
           <ul>
             <li v-for="item in protasi.items" :key="typeof(item) === 'object' ? item.display : item">
               
-              <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)">
+              <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)"
+                  @expand="childExpanded">
                 <div v-for="url in item.urls" :key="url.title">
                   <a :href="url.href" target="_blank" style="display: inline-block;">
                     {{ url.title }}
@@ -98,6 +99,13 @@ export default {
     showLocationHash: function () {
       document.location.hash = this.protasi.id
     },
+    childExpanded: function (value) {
+      console.log('parentexpand')
+
+      if (value && this.collapsed) {
+        this.toggleCollapsed()
+      }
+    }
   }
 }
 </script>

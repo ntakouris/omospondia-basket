@@ -13,19 +13,24 @@ export default {
   props: ['title', 'slugs'],
   data () {
     return {
-      collapsed : true
+      collapsed : false
     }
   },
   mounted () {
-  const hash = document.location.hash.slice(1)
+    this.collapsed = true
+    const hash = document.location.hash.slice(1)
 
-  if (hash && this.slugs.includes(hash)) {
-    this.collapsed = false
-  }
+    if (hash && this.slugs.includes(hash)) {
+      this.collapsed = false
+    }
   },
   methods: {
     toggleCollapsed() {
       this.collapsed = !this.collapsed
+
+      if (!this.collapsed) {
+        this.$emit('expand', true)
+      }
     }
   }
 }
