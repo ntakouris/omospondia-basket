@@ -50,7 +50,7 @@ export default {
   data: () => ({
     windowHeight: 0,
     navlinks,
-    menuVisible: true
+    menuVisible: false
   }),
   methods: {
     toggleMenu () {

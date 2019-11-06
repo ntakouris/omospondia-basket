@@ -7,7 +7,6 @@
         <md-card-content :class="collapsed ? 'collapsed' : 'uncollapsed'">
           <ul>
             <li v-for="item in protasi.items" :key="typeof(item) === 'object' ? item.display : item">
-              
               <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)"
                   @expand="childExpanded">
                 <div v-for="url in item.urls" :key="url.title">
@@ -67,13 +66,17 @@ export default {
   },
   mounted () {
     const hash = document.location.hash.slice(1)
-    const allContainedChildSlugs = this.protasi.items
-      .filter(item => typeof(item) === 'object').map(expandable => expandable.urls)
-      .flat(1).map(url => url.slug)
-    
-    allContainedChildSlugs.push(this.protasi.id)
-    if (hash && allContainedChildSlugs.includes(hash)) {
+
+    if (hash && hash === this.protasi.id) {
       this.collapsed = false
+
+      this.$nextTick(() => {
+        window.setTimeout(() => {
+          document.location.hash = hash
+          const el = document.getElementById(hash)
+          el.scrollIntoView()
+        }, 500)
+      })
     }
   },
   methods: {
@@ -84,24 +87,16 @@ export default {
     },
     toggleCollapsed: function () {
       this.collapsed = !this.collapsed
-
-      if (!this.collapsed) {
-        this.showLocationHash()
-      }
     },
     openDialog: function () {
       this.triggerDialog = !this.triggerDialog
     },
     openSharingDialog: function () {
-      this.showLocationHash()
       this.openDialog()
-    },
-    showLocationHash: function () {
-      document.location.hash = this.protasi.id
     },
     childExpanded: function (value) {
       if (value && this.collapsed) {
-        this.toggleCollapsed()
+        this.collapsed = !this.collapsed
       }
     }
   }
