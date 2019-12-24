@@ -10,7 +10,10 @@
               <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)"
                   @expand="childExpanded">
                 <div v-for="url in item.urls" :key="url.title">
-                  <a :href="url.href" target="_blank" style="display: inline-block;" :id="url.slug">
+
+                  <a :href="url.href" target="_blank" :id="url.slug" 
+                  v-bind:style="{ color: (hash === url.slug ? 'red' : 'default')}"
+                  class="scroll-workaround">
                     {{ url.title }}
                   </a>
 
@@ -22,7 +25,7 @@
             </li>
           </ul>
 
-        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων ή προβλημάτων <md-button class="md-raised md-accent" :href="feedbackFormUrl" target="_blank"> εδω</md-button></p>
+        <p style="margin-left: 24px; margin-top: 12px; line-height: 48px;">Κατάθεση προτάσεων ή προβλημάτων <md-button class="ml-0 pl-0 md-accent" :href="feedbackFormUrl" target="_blank"> εδω</md-button></p>
         </md-card-content>
         
         <md-card-actions>
@@ -61,12 +64,13 @@ export default {
     return {
       collapsed: true,
       triggerDialog: false,
+      hash: '',
       feedbackFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc9oE-wt_siyXiV6lmuTllL5nPfWui8nvI7c_sdZC2EroxfLw/viewform?fbclid=IwAR1HR893dnk9MU2r7pGShAgh271Mo9B_lcjdcSNT2ofiEgUl1NksNjeaDTQ'
     }
   },
   mounted () {
     const hash = document.location.hash.slice(1)
-
+    this.hash = hash
     if (hash && hash === this.protasi.id) {
       this.collapsed = false
 
@@ -74,8 +78,9 @@ export default {
         window.setTimeout(() => {
           document.location.hash = hash
           const el = document.getElementById(hash)
-          el.scrollIntoView()
-        }, 500)
+          el.scrollIntoView(true)
+
+        }, 1000)
       })
     }
   },
@@ -147,5 +152,10 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
+}
+
+.scroll-workaround {
+  padding-top: 80px;
+  margin-top: -80px;
 }
 </style>
