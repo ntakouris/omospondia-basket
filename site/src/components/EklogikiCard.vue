@@ -11,6 +11,10 @@
           </a>
         </md-ripple>
 
+        <md-card-content v-if="diadikasia.note">
+          {{ diadikasia.note }}
+        </md-card-content>
+
         <md-card-actions>
 
           <md-button @click="openSharingDialog()">Μοιρασου</md-button>
@@ -69,6 +73,13 @@ export default {
 }
 
 .md-card-actions {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.md-card-content {
+  margin-top: 0;
+  margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
