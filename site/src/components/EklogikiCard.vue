@@ -2,13 +2,13 @@
   <div>
     <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
-          <a :href="diadikasia.href" target="_blank" :id="diadikasia.slug">
+          <FocusableAnchor :href="diadikasia.href" :id="diadikasia.slug">
           <md-card-header>
             <div class="md-title" :style="diadikasia.href !== '' ? '' : 'color: black;'">
               {{ diadikasia.title }}
             </div>
           </md-card-header>
-          </a>
+          </FocusableAnchor>
         </md-ripple>
 
         <md-card-content v-if="diadikasia.note">
@@ -31,11 +31,13 @@
 <script>
 import config from '~/data/config.json'
 import SocialShareDialog from './SocialShareDialog.vue'
+import FocusableAnchor from './FocusableAnchor.vue'
 
 export default {
   name: 'EklogikiCard',
   components: {
-    SocialShareDialog
+    SocialShareDialog,
+    FocusableAnchor
   },
   props: ['diadikasia'],
   data () {

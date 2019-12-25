@@ -123,4 +123,16 @@ a:hover {
   margin-left: 8px !important;
   margin-right: 32px !important;
 }
+
+.scroll-workaround {
+  padding-top: 80px;
+  margin-top: -80px;
+  outline: none !important;
+  border: 0;
+}
+
+.scroll-workaround:active, .scroll-workaround:focus { 
+ outline: none !important; 
+ border: 0;
+}
 </style>

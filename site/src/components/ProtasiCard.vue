@@ -1,5 +1,5 @@
 <template>
-  <md-card :md-elevation="1" md-with-hover :class="collapsed ? 'smallflex' : 'bigflex'" :id="protasi.id">
+  <md-card :md-elevation="1" md-with-hover :class="{smallflex: collapsed, bigflex: !collapsed}" :id="protasi.id">
         <md-card-header>
           <div class="md-title">{{ protasi.title }}</div>
         </md-card-header>
@@ -10,12 +10,7 @@
               <SimpleExpandable v-if="typeof(item) === 'object'" :title="item.display" :slugs="item.urls.map(x => x.slug)"
                   @expand="childExpanded">
                 <div v-for="url in item.urls" :key="url.title">
-
-                  <a :href="url.href" target="_blank" :id="url.slug" 
-                  v-bind:style="{ color: (hash === url.slug ? 'red' : 'default')}"
-                  class="scroll-workaround">
-                    {{ url.title }}
-                  </a>
+                  <FocusableAnchor :href="url.href" :id="url.slug" > {{ url.title }} </FocusableAnchor>
 
                   <UrlShareButton :title="url.title" :url="getSharingUrl(url.slug)"/>
                 </div>
@@ -51,6 +46,7 @@ import config from '~/data/config.json'
 import SimpleExpandable from './SimpleExpandable.vue'
 import SocialShareDialog from './SocialShareDialog.vue'
 import UrlShareButton from './UrlShareButton.vue'
+import FocusableAnchor from './FocusableAnchor.vue'
 
 export default {
   name: 'ProtasiCard',
@@ -58,7 +54,8 @@ export default {
   components: {
     SimpleExpandable,
     SocialShareDialog,
-    UrlShareButton
+    UrlShareButton,
+    FocusableAnchor
   },
   data () {
     return {
@@ -152,17 +149,5 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
-}
-
-.scroll-workaround {
-  padding-top: 80px;
-  margin-top: -80px;
-  outline: none !important;
-  border: 0;
-}
-
-.scroll-workaround:active, .scroll-workaround:focus { 
- outline: none !important; 
- border: 0;
 }
 </style>

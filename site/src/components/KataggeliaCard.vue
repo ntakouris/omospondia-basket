@@ -3,9 +3,9 @@
     <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
         <md-card-header>
-          <a :href="kataggelia.href" target="_blank" :id="kataggelia.slug">
+          <FocusableAnchor :href="kataggelia.href" :id="kataggelia.slug">
             <div class="md-title">{{ kataggelia.display }}</div>
-          </a>
+          </FocusableAnchor>
 
           <div class="md-subhead">{{ kataggelia.date }}</div>
         </md-card-header>
@@ -26,11 +26,13 @@
 <script>
 import config from "~/data/config.json";
 import SocialShareDialog from "./SocialShareDialog.vue";
+import FocusableAnchor from "./FocusableAnchor.vue"
 
 export default {
   name: "KataggeliaCard",
   components: {
-    SocialShareDialog
+    SocialShareDialog,
+    FocusableAnchor
   },
   props: ["kataggelia"],
   data() {

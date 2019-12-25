@@ -3,9 +3,9 @@
     <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
         <md-card-header>
-          <a :href="apodeltiosi.href" target="_blank" :id="apodeltiosi.slug">
+          <FocusableAnchor :href="apodeltiosi.href" :id="apodeltiosi.slug">
             <div class="md-title">{{ apodeltiosi.display }}</div>
-          </a>
+          </FocusableAnchor>
 
           <div class="md-subhead">{{ apodeltiosi.author }} - {{ apodeltiosi.date }}</div>
         </md-card-header>
@@ -28,13 +28,15 @@
 </template>
 
 <script>
-import config from "~/data/config.json";
-import SocialShareDialog from "./SocialShareDialog.vue";
+import config from "~/data/config.json"
+import SocialShareDialog from "./SocialShareDialog.vue"
+import FocusableAnchor from './FocusableAnchor.vue'
 
 export default {
   name: "ApodeltiosiCard",
   components: {
-    SocialShareDialog
+    SocialShareDialog,
+    FocusableAnchor
   },
   props: ["apodeltiosi"],
   data() {

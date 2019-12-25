@@ -2,8 +2,8 @@
   <div>
     <md-card :md-elevation="1" md-with-hover class="diadikasia-card" style="margin-left: 0;">
       <md-ripple>
-        <md-card-header :id="arthro.slug">
-          <a class="md-title" :href="arthro.href" target="_blank">{{ arthro.display }}</a>
+        <md-card-header>
+          <FocusableAnchor class="md-title" :href="arthro.href" :id="arthro.slug">{{ arthro.display }}</FocusableAnchor>
           <div class="md-subhead">{{ arthro.subhead }}</div>
         </md-card-header>
       </md-ripple>
@@ -33,11 +33,13 @@
 <script>
 import config from "~/data/config.json";
 import SocialShareDialog from "./SocialShareDialog.vue";
+import FocusableAnchor from "./FocusableAnchor.vue"
 
 export default {
   name: "ArthroCard",
   components: {
-    SocialShareDialog
+    SocialShareDialog,
+    FocusableAnchor
   },
   props: ["arthro"],
   data() {
