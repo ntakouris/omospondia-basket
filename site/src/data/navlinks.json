@@ -6,7 +6,7 @@
         "glink": "/about"
     },
     {
-        "icon": "announcement",
+        "icon": "sports_basketball",
         "text": "12 Προτάσεις συμμετοχής και ανάπτυξης",
         "glink": "/protaseis"
     },
@@ -29,11 +29,6 @@
         "icon": "view_agenda",
         "text": "Επιστημονικά Άρθρα",
         "glink": "/arthra"
-    },
-    {
-        "icon": "sports_basketball",
-        "text": "Πρωτοβουλίες",
-        "glink": "/protovoulies"
     },
     {
         "icon": "rss_feed",
