@@ -1,5 +1,6 @@
 <template>
   <Layout :title="title">
+    <img src="/banner_promo.jpg"/><br /><br />
     <ProtaseisContainer />
     <div class="anchor-pad-bot"/>
   </Layout>

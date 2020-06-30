@@ -1,8 +1,6 @@
 <template>
   <Layout :title="title">   
-    <section>
-      
-    </section>
+    <img src="/banner_promo.jpg"/><br /><br />
 
     <ProtaseisContainer />
   </Layout>
