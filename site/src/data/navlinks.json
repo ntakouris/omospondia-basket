@@ -34,5 +34,25 @@
         "icon": "rss_feed",
         "text": "Επικαιρότητα - Tweets",
         "glink": "/tweets"
+    },
+    {
+        "icon": "facebook",
+        "text": "Facebook",
+        "href": "https://www.facebook.com/vasilis.ntakouris"
+    },
+    {
+        "icon": "fast_forward",
+        "text": "YouTube",
+        "href": "https://www.youtube.com/channel/UCgdCbosMp4QCVhO3bK5-DMA"
+    },
+    {
+        "icon": "amp_stories",
+        "text": "Blog",
+        "href": "https://ntakouris.wordpress.com/"
+    },
+    {
+        "icon": "mail",
+        "text": "vasilis.ntakouris@gmail.com",
+        "href": "mailto:vasilis.ntakouris@gmail.com"
     }
 ]
