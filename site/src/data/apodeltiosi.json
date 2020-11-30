@@ -1,5 +1,34 @@
 [
     {
+        "display": "Δώσε πάσα για το μπάσκετ που οραματιζόμαστε",
+        "author": "Βαγγέλης Λιόλιος",
+        "date": "2020",
+        "href": "https://dwsepasa.gr/",
+        "slug": "pasa"
+    },
+    {
+        "display": "Πρώτα το Μπάσκετ",
+        "author": "Παναγιώτης Φασούλας",
+        "date": "12/2020",
+        "href": "https://hellenicbasketball.gr/kalesma",
+        "slug": "kalesma"
+    },
+    {
+        "display": "Συνέντευξη του Βασίλη Ντάκουρη στην στην MakSports της Δυτικής Μακεδονίας εφ’όλης της ύλης.",
+        "author": "Mak Sports",
+        "date": "30/11/2020",
+        "href": "https://ntakouris.wordpress.com/2020/11/30/%cf%83%cf%85%ce%bd%ce%ad%ce%bd%cf%84%ce%b5%cf%85%ce%be%ce%b7-%cf%84%ce%bf%cf%85-%ce%b2%ce%b1%cf%83%ce%af%ce%bb%ce%b7-%ce%bd%cf%84%ce%ac%ce%ba%ce%bf%cf%85%cf%81%ce%b7-%cf%83%cf%84%ce%b7%ce%bd-%cf%83/",
+        "slug": "maksports"
+    },
+    {
+        "display": "Τηλεοπτική συνέντευξη του Βασίλη Ντάκουρη στο Θράκη ΝΕΤ TV.",
+        "author": "Θράκη Net TV",
+        "content": "Μητρώο αθλητικών φορέων, τεχνολογία, ανάπτυξη, εκδημοκρατισμός, χρηστή διακυβέρνηση.",
+        "date": "23/11/2020",
+        "href": "https://ntakouris.wordpress.com/2020/11/23/%cf%84%ce%b7%ce%bb%ce%b5%ce%bf%cf%80%cf%84%ce%b9%ce%ba%ce%ae-%cf%83%cf%85%ce%bd%ce%ad%ce%bd%cf%84%ce%b5%cf%85%ce%be%ce%b7-%cf%84%ce%bf%cf%85-%ce%b2%ce%b1%cf%83%ce%af%ce%bb%ce%b7-%ce%bd%cf%84%ce%ac/",
+        "slug": "thraki-tv"
+    },
+    {
         "display": "Ντάκουρης: Ποιά είναι τελικά τα χρέη της ΕΟΚ; Ένα ιδιαίτερο κουΐζ 14 ερωτήσεων με τις απαντήσεις τους.",
         "author": "Gazzetta Team",
         "date": "03/08/2020",
