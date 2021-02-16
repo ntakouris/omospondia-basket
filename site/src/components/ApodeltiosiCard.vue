@@ -4,10 +4,10 @@
       <md-ripple>
         <md-card-header>
           <FocusableAnchor :href="apodeltiosi.href" :id="apodeltiosi.slug">
-            <div class="md-title">{{ apodeltiosi.display }}</div>
+            <div class="md-title" :style="largeText ? 'font-size: 24px' : 'font-size: 18px'">{{ apodeltiosi.display }}</div>
           </FocusableAnchor>
 
-          <div class="md-subhead">{{ apodeltiosi.author }} - {{ apodeltiosi.date }}</div>
+          <div class="md-subhead">{{ apodeltiosi.author }} | {{ apodeltiosi.date }}</div>
         </md-card-header>
       </md-ripple>
 
@@ -16,7 +16,7 @@
       </md-card-content>
 
       <md-card-actions>
-        <md-button @click="openSharingDialog()">Μοιρασου</md-button>
+        <md-button @click="openSharingDialog()">Μοιράσου</md-button>
         <md-button class="md-icon-button" @click="openSharingDialog()">
           <md-icon>share</md-icon>
         </md-button>
@@ -38,7 +38,7 @@ export default {
     SocialShareDialog,
     FocusableAnchor
   },
-  props: ["apodeltiosi"],
+  props: ["apodeltiosi", "largeText"],
   data() {
     return {
       triggerDialog: false

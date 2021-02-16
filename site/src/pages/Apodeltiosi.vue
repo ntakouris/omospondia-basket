@@ -1,7 +1,7 @@
 <template>
   <Layout :title="title">   
     <section>
-        <ApodeltiosiCard v-for="a in apodeltiosi" :key="a.href" :apodeltiosi="a"/>
+        <ApodeltiosiCard v-for="(a, index) in apodeltiosi" :key="a.href" :apodeltiosi="a" :largeText="index==0"/>
     </section>
     <div class="anchor-pad-bot"/>
   </Layout>
