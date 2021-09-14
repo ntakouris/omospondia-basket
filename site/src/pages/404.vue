@@ -1,25 +1,22 @@
 <template>
   <Layout :title="title">   
-    <section>
-        <KataggeliaCard v-for="k in kataggelies" :key="k.href" :kataggelia="k"/>
-    </section>
-    <div class="anchor-pad-bot"/>
+    <img src="/banner_promo.jpg"/><br /><br />
+
+    <ProtaseisContainer />
   </Layout>
 </template>
 
 <script>
-import kataggelies from '~/data/kataggelies.json'
-import KataggeliaCard from '~/components/KataggeliaCard.vue'
+import ProtaseisContainer from '~/components/ProtaseisContainer.vue'
 
 export default {
-  name: 'Kataggelies',
+  name: '404',
   components: {
-    KataggeliaCard
+    ProtaseisContainer
   },
   data () {
     return {
-      kataggelies,
-      title: 'Δημόσιες Καταγγελίες'
+      title: 'Για μια ομοσπονδία συμμετοχής και ανάπτυξης με διαφάνεια'
     }
   },
   metaInfo () {
@@ -39,5 +36,5 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 </style>

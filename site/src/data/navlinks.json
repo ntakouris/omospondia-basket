@@ -16,11 +16,6 @@
         "glink": "/eklogikes-diadikasies"
     },
     {
-        "icon": "pan_tool",
-        "text": "Δημόσιες Καταγγελίες",
-        "glink": "/kataggelies"
-    },
-    {
         "icon": "library_books",
         "text": "Αποδελτίωση Τύπου",
         "glink": "/apodeltiosi"

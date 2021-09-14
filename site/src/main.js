@@ -16,7 +16,7 @@ export default function (Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: 'keywords',
-    content: 'basket, basket12, omospondia, protaseis, ntakouris, kataggelies'
+    content: 'basket, basket12, omospondia, protaseis, ntakouris'
   })
 
   Vue.use(VueMaterial)
